@@ -12,7 +12,7 @@
     <script src="shaders/skyGradient.js"></script>
   </head>
   <body>
-    <a-scene fog="color: #241417; near: 0; far: 30;" raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position>
+    <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position>
       <a-assets>
          <img id="thumbHome" crossOrigin="anonymous" src="images/ivarbasecamp.png">
         <img id="thumbTeam" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/sunrise.png">
@@ -21,9 +21,7 @@
       <a-link  title="Back to IVAR Basecamp" href="index.html" position="-3.5 1.5 -1.0" image="#thumbHome"></a-link>
       <a-link title="Meet the Team" href="team.html" position="0 1.5 -1.0" image="#thumbTeam"></a-link>
     <a-link   title="See the 3D-scanned Mani Stones" href="manistones.html" position="3.5 1.5 -1.0" image="#thumbManistones"></a-link>
-      <a-entity id="sky" src="images/faroes1.jpg"
-         ></a-entity>
-      <a-entity ground='url: https://cdn.aframe.io/link-traversal/models/groundCity.json'></a-entity>
+      <a-sky src="images/faroes1.jpg" geometry="primitive: sphere; radius: 65;"></a-entity>
       <a-entity light="type: point; color: #f4f4f4; intensity: 0.4; distance: 0" position="0 2 0"></a-entity>
       <a-entity id="leftHand" link-controls="hand: left"></a-entity>
       <a-entity id="rightHand" link-controls="hand: right"></a-entity>
