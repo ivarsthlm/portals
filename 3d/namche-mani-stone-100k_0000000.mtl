@@ -1,0 +1,20 @@
+# 
+# Wavefront material file
+# Created in RealityCapture v1.0.2
+# www.capturingreality.com
+# 
+
+newmtl namche-mani-stone-100k_0000000_Material
+Ka 1 1 1
+Kd 1 1 1
+d 1
+Ns 0
+illum 1
+
+newmtl namche-mani-stone-100k_0000000_Material_u1_v1
+Ka 1 1 1
+Kd 1 1 1
+d 1
+Ns 0
+illum 1
+map_Kd namche-mani-stone-100k_u1_v1.png
