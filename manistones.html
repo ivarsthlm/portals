@@ -26,9 +26,11 @@
                 material="shader: skyGradient; colorTop: #1F1E36; colorBottom: #47c9ff; side: back"></a-entity>
       <a-entity ground='url: https://cdn.aframe.io/link-traversal/models/groundMountains.json'></a-entity>
 	  <a-entity position="0.325 -0.18 5.144" rotation="-88.00631733209445 120.03465807990747 -34.0336930307709" scale="0.195 0.195 0.195" obj-model="mtl:3d/namche-mani-stone-100k_0000000.mtl;obj:3d/namche-mani-stone-100k_0000000.obj"></a-entity>
-  <a-entity light="color:#f4f4f4;intensity:1.05;type:spot;decay:0.9500000000000002;penumbra:1" position="-2.221 2.589 2.635" rotation="-12.83425461093044 -145.98964619933375 -147.82311114375239"></a-entity>
+ 
       <a-entity id="leftHand" link-controls="hand: left"></a-entity>
-      <a-entity id="rightHand" link-controls="hand: right"></a-entity>
+      <a-entity id="rightHand" link-controls="hand: right">
+	   <a-entity light="color:#f4f4f4;intensity:1.05;type:spot;decay:0.9500000000000002;penumbra:1" position="-2.221 2.589 2.635" rotation="-12.83425461093044 -145.98964619933375 -147.82311114375239"></a-entity>
+	  </a-entity>
     </a-scene>
   </body>
 </html>
