@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Links</title>
     <meta name="description" content="Links – A-Frame">
-       <script src="js/aframe-master.js"></script>
+       <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="js/components/aframe-tooltip-component.js"></script>
     <script src="js/components/camera-position.js"></script>
     <script src="js/components/ground.js"></script>
@@ -26,7 +26,9 @@
                 material="shader: skyGradient; colorTop: #1F1E36; colorBottom: #47c9ff; side: back"></a-entity>
       <a-entity ground='url: https://cdn.aframe.io/link-traversal/models/groundMountains.json'></a-entity>
 	  <a-entity position="0.325 -0.18 5.144" rotation="-88.00631733209445 120.03465807990747 -34.0336930307709" scale="0.195 0.195 0.195" obj-model="mtl:3d/namche-mani-stone-100k_0000000.mtl;obj:3d/namche-mani-stone-100k_0000000.obj"></a-entity>
-	
+	<a-camera>
+		<a-entity  rotation="0 0 0" light="type:spot;intensity:0.3;penumbra:1.3;decay:2.06;angle:15"></a-entity>
+	</a-camera>
       <a-entity id="leftHand" link-controls="hand: left"></a-entity>
       <a-entity id="rightHand" link-controls="hand: right">
 	<a-entity  rotation="0 0 0" light="type:spot;intensity:2.5;penumbra:1;decay:2.06;angle:15"></a-entity>
