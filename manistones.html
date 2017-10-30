@@ -5,6 +5,11 @@
     <title>Links</title>
     <meta name="description" content="Links – A-Frame">
        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+	   
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <script src="js/easyrtc.js"></script>
+    <script src="https://unpkg.com/networked-aframe/dist/networked-aframe.min.js"></script>
+	
     <script src="js/components/aframe-tooltip-component.js"></script>
     <script src="js/components/camera-position.js"></script>
     <script src="js/components/ground.js"></script>
@@ -12,11 +17,14 @@
     <script src="shaders/skyGradient.js"></script>
   </head>
   <body>
-    <a-scene fog="color: #241417; near: 0; far: 30;" raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position>
+    <a-scene fog="color: #241417; near: 0; far: 30;" raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position networked-scene>
       <a-assets>
         <img id="thumbHome" crossOrigin="anonymous" src="images/ivarbasecamp.png">
         <img id="thumbTeam" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/sunrise.png">
         <img id="thumbFaroes" crossOrigin="anonymous" src="images/faroes1.jpg">
+		 <script id="avatar-template" type="text/html">
+          <a-sphere></a-sphere>
+        </script>
       </a-assets>
       <a-link  title="Back to IVAR Basecamp" href="index.html" position="-3.5 1.5 -3.0" image="#thumbHome"></a-link>
       <a-link title="Meet the Team" href="team.html" position="0 1.5 -3.0" image="#thumbTeam"></a-link>
@@ -26,9 +34,9 @@
                 material="shader: skyGradient; colorTop: #1F1E36; colorBottom: #47c9ff; side: back"></a-entity>
       <a-entity ground='url: https://cdn.aframe.io/link-traversal/models/groundMountains.json'></a-entity>
 	  <a-entity position="0.325 -0.18 5.144" rotation="-88.00631733209445 120.03465807990747 -34.0336930307709" scale="0.195 0.195 0.195" obj-model="mtl:3d/namche-mani-stone-100k_0000000.mtl;obj:3d/namche-mani-stone-100k_0000000.obj"></a-entity>
-	<a-camera>
-		<a-entity  rotation="0 0 0" light="type:spot;intensity:0.3;penumbra:1.3;decay:2.06;angle:15"></a-entity>
-	</a-camera>
+	 <a-entity id="player" networked="template:#avatar-template;showLocalTemplate:false;" camera wasd-controls look-controls>
+	 <a-entity  rotation="0 0 0" light="type:spot;intensity:2.5;penumbra:1;decay:2.06;angle:15"></a-entity>
+      </a-entity>
       <a-entity id="leftHand" link-controls="hand: left"></a-entity>
       <a-entity id="rightHand" link-controls="hand: right">
 	<a-entity  rotation="0 0 0" light="type:spot;intensity:2.5;penumbra:1;decay:2.06;angle:15"></a-entity>
