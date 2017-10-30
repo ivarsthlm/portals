@@ -18,18 +18,18 @@
         <img id="thumbTeam" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/sunrise.png">
         <img id="thumbFaroes" crossOrigin="anonymous" src="images/faroes1.jpg">
       </a-assets>
-      <a-link  title="Back to IVAR Basecamp" href="index.html" position="-3.5 1.5 -1.0" image="#thumbHome"></a-link>
-      <a-link title="Meet the Team" href="team.html" position="0 1.5 -1.0" image="#thumbTeam"></a-link>
-      <a-link title="Explore the Faroe Islands" href="faroes.html" position="3.5 1.5 -1.0" image="#thumbFaroes"></a-link>
+      <a-link  title="Back to IVAR Basecamp" href="index.html" position="-3.5 1.5 -3.0" image="#thumbHome"></a-link>
+      <a-link title="Meet the Team" href="team.html" position="0 1.5 -3.0" image="#thumbTeam"></a-link>
+      <a-link title="Explore the Faroe Islands" href="faroes.html" position="3.5 1.5 -3.0" image="#thumbFaroes"></a-link>
       <a-entity id="sky"
                 geometry="primitive: sphere; radius: 65;"
                 material="shader: skyGradient; colorTop: #1F1E36; colorBottom: #47c9ff; side: back"></a-entity>
       <a-entity ground='url: https://cdn.aframe.io/link-traversal/models/groundMountains.json'></a-entity>
 	  <a-entity position="0.325 -0.18 5.144" rotation="-88.00631733209445 120.03465807990747 -34.0336930307709" scale="0.195 0.195 0.195" obj-model="mtl:3d/namche-mani-stone-100k_0000000.mtl;obj:3d/namche-mani-stone-100k_0000000.obj"></a-entity>
-
+	<a-entity  rotation="0 0 0" light="type:spot;intensity:2.5;penumbra:0.31999999999999995;decay:2.06"></a-entity>
       <a-entity id="leftHand" link-controls="hand: left"></a-entity>
       <a-entity id="rightHand" link-controls="hand: right">
-	<a-entity  rotation="0 0 0" light="type:spot;intensity:2.5;penumbra:0.31999999999999995;decay:2.06"></a-entity>
+	<a-entity  rotation="0 0 0" light="type:spot;intensity:2.5;penumbra:1;decay:2.06"></a-entity>
 	  </a-entity>
     </a-scene>
   </body>
